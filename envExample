@@ -1,0 +1,2 @@
+PORT={porta-da-aplicação}
+MONGODB_URL={url-do-mongo-db-com-porta}

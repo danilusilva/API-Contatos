@@ -2,10 +2,10 @@ const express = require("express")
 const router = express.Router()
 const Contatos = require('../models/Contato');
 const { default: mongoose } = require("mongoose");
-
+const basicAuth = require('../middlewares/basicAuth');
 
 // Listar contatos
-router.get('/', async (req, res) => {
+router.get('/', basicAuth, async (req, res) => {
     const dados = await Contatos.find();
 
     const retorno = {
